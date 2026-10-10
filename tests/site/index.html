@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Keyhop test page</title>
+<style>body{margin:0;font:16px sans-serif} .row{height:60px;padding:8px} .tall{height:3200px;background:linear-gradient(#fff,#ccd)}</style>
+<script>window.__keys=[];window.addEventListener('keydown',e=>window.__keys.push(e.key));</script>
+</head><body>
+<div class="row"><a href="#one" id="one">One</a></div>
+<div class="row"><a href="#two" id="two">Two</a></div>
+<div class="row"><a href="#three" id="three">Three</a></div>
+<div class="row"><a href="#four" id="four">Four</a></div>
+<div class="row"><a href="#five" id="five">Five</a></div>
+<div class="row"><a href="page2.html" id="p2">Page two</a></div>
+<div class="row"><input id="field" type="text" placeholder="type here"></div>
+<div class="row"><textarea id="area" rows="1"></textarea> <button id="btn" type="button">Button</button></div>
+<div class="tall"></div>
+<div class="row"><a href="#bottom" id="bottom">Bottom link (below the fold)</a></div>
+</body></html>

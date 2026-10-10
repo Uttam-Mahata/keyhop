@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Keyhop options</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.3rem; }
+    label { display: block; margin-top: 1.2rem; font-weight: 600; }
+    small { display: block; font-weight: 400; opacity: .7; }
+    textarea, input[type=text] { width: 100%; box-sizing: border-box; font: 14px ui-monospace, monospace; padding: .5rem; }
+    textarea { height: 9rem; }
+    button { margin-top: 1.4rem; padding: .5rem 1.2rem; font-size: 1rem; }
+    #status { margin-left: .8rem; opacity: .8; }
+  </style>
+</head>
+<body>
+  <h1>Keyhop options</h1>
+
+  <label for="excluded">Excluded sites
+    <small>One pattern per line; Keyhop is disabled there. <code>*</code> is a wildcard,
+      matched against host + path, e.g. <code>music.youtube.com/*</code> or <code>*.example.com/*</code>.</small>
+  </label>
+  <textarea id="excluded" spellcheck="false"></textarea>
+
+  <label for="hintChars">Hint characters
+    <small>Letters used for link hints (at least 4). Home row first is fastest.</small>
+  </label>
+  <input id="hintChars" type="text" spellcheck="false">
+
+  <label><input id="newTabActive" type="checkbox"> Focus new tabs opened with <code>F</code></label>
+
+  <button id="save">Save</button><span id="status"></span>
+  <script src="options.js"></script>
+</body>
+</html>
